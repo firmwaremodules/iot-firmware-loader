@@ -1,9 +1,12 @@
-# iot-firmware-loader
+# IoT MCU Firmware Loader
 Cross-target firmware loading and device provisioning tool for ARM Cortex-M devices.
 
+## About
 The firmware loading tool **fm_load.exe** is "plug and load" and ready to program firmware binaries into internal flash on supported targets.    This tool currently supports programming the MSP432, CC26XX and CC13XX MCUs from TI and the Nordic nRF52832 MCU through the XDS110 debug interface present on newer LaunchPad development platforms for CC26xx, CC13xx and MSP432.  fm_load has been built and tested with Windows 10, and is code-signed by Firmware Modules Inc.
 
-#### Usage
+fm_load.exe is a packaged set of Python compiled code based on the pyOCD project.
+
+## Usage
 
 fm_load.exe is intended to be executed in a console.
 
@@ -80,7 +83,7 @@ No operation performed
 ```
 
 
-##### Loading Firmware
+## Loading Firmware
 
 Loading firmware onto a supported target device is as simple as adding the file name of the firmware binary image to load as a command-line argument as shown below (with only the desired target development board connected).  When multiple supported target development boards are connected, the specific target must be set with the `-t` option.
 
@@ -109,6 +112,12 @@ Writing 62176 bytes...
 ```
 
 In this instance a progress bar is displayed showing the status of firmware programming.  When programming is completed, the target is reset and begins executing out of internal flash at address 0x0.
+
+# Support
+
+Consider sending some Bitcoin our way to help continue development!
+
+`1NiuswdWBkfRd3ZmDVZpa1ZFpw1kYJH3LZ`
 
 
 # Release Notes
