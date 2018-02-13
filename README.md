@@ -6,6 +6,9 @@ The firmware loading tool **fm_load.exe** is "plug and load" and ready to progra
 
 fm_load.exe is a packaged set of Python compiled code based on the pyOCD project and integrates the [pyswd](https://github.com/pavelrevak/pyswd) st-link access library.
 
+Why did we make this tool?
+First off, it is command-line driven which allows automated build and test systems to be setup. Projects that are mature enough to require dev-ops will love that. Secondly, for TI targets, it's a heck of a lot smaller than Uniflash!  Also, it contains a customized GDB server to facilitate automated unit test interaction with the targets.  This feature is available with our IoT Firmware Cores.
+
 ## Usage
 
 fm_load.exe is intended to be executed in a console.
